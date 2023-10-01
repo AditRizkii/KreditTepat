@@ -1,100 +1,38 @@
 import React from "react";
+import InputForm from "../../component/inputForm";
 
 import { Link } from "react-router-dom";
 
 const index = () => {
   return (
-    <div className="w-full h-full items-center justify-center flex-col gap-3 flex ">
-      <div className="h-[250px] w-full p-6 ">
-        <div className="h-full w-full rounded-md bg-slate-400 flex gap-3 flex-row p-4 ">
-          <div className="w-full h-full "></div>
-          <div className="w-full h-full "></div>
+    <div className="relative w-full h-screen ">
+      {/* Video Background */}
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        autoPlay
+        loop
+        muted
+      >
+        <source src="https://uploads-ssl.webflow.com/63ec206c5542613e2e5aa784/6406cfe73156a7b6c19856ea_bg%20contact-transcode.webm" type="video/webm" />
+      </video>
+      
+      <div className="grid grid-cols-2 gap-4 px-0 backdrop-blur-md ">
+      <div className="h-full w-full p-6 ">
+        <div className="h-full w-full rounded-md flex items-center justify-center p-4 text-white font-poppins text-4xl">
+          <h1>We're here to support your credit needs.</h1>
         </div>
       </div>
-
-      <div className="w-full  h-[800px] flex flex-col gap-1 pl-12 ">
-        <div className="max-w-sm  h-auto p-1 flex flex-col gap-1 rounded-sm ">
-          <label htmlFor="" className="text-[10px] font-poppins">
-            Siapa Nama Anda
-          </label>
-          <div className="flex flex-row gap-2">
-            <input
-              type="text"
-              placeholder="first name"
-              className="placeholder:text-xs placeholder:flex text-xs rounded-sm h-auto py-1 border border-black focus:outline-none px-1"
-            />
-            <input
-              type="text"
-              placeholder="last name"
-              className=" placeholder:text-xs placeholder:flex text-xs rounded-sm h-auto py-1 border border-black focus:outline-none px-1"
-            />
-          </div>
+      <div className=" w-3/4 item bg-slate-900   flex flex-col gap-8  backdrop-blur-md rounded-2xl mt-12 p-8  text-white text-xl">
+        <InputForm label="Name" isiInput="Enter your name" />
+        <InputForm label="Age" isiInput="Enter Your age" />
+        <InputForm label="Your Job" isiInput="Enter Your job" />
+        <InputForm label="Electric Bill" isiInput="Monthly Electricity Bill Amount." />
+        <InputForm label="Credit History" isiInput="Enter your Credit" />
+        <InputForm label="Debt" isiInput="If you have Debt" />
+        <div>
+          <button className="rounded-full bg-sky-800 w-32 h-8 mt-5">Submit</button>
         </div>
-        <div className="w-80 h-auto p-1 flex flex-col gap-1 rounded-sm">
-          <label htmlFor="" className="text-[10px] font-poppins">
-            Berapa Umur anda
-          </label>
-          <input
-            type="text"
-            placeholder="Tahun"
-            className="placeholder:text-xs placeholder:flex text-xs rounded-sm h-auto py-1 border border-black focus:outline-none px-1"
-          />
-        </div>
-        <div className="max-w-[260px]  h-auto p-1 flex-col gap-1 flex rounded-sm ">
-          <label htmlFor="" className="text-[10px] font-poppins">
-            Sebutkan Pekerjaan Anda
-          </label>
-          <input
-            type="text"
-            placeholder="PNS/Swasta"
-            className="w-[250px] placeholder:text-xs placeholder:flex text-xs rounded-sm h-auto py-1 border border-black focus:outline-none px-1"
-          />
-        </div>
-        <div className="max-w-[260px]  h-auto p-1 flex-col gap-1 flex rounded-sm ">
-          <label htmlFor="" className="text-[10px] font-poppins">
-            Berapa penedapatan Anda
-          </label>
-          <input
-            type="text"
-            placeholder="Rp."
-            className="w-[250px] placeholder:text-xs placeholder:flex text-xs rounded-sm h-auto py-1 border border-black focus:outline-none px-1"
-          />
-        </div>
-        <div className="max-w-[260px]  h-auto p-1 flex-col gap-1 flex rounded-sm ">
-          <label htmlFor="" className="text-[10px] font-poppins">
-            Sebutkan Jumlah Tagihan Listrik Per-Bulan
-          </label>
-          <input
-            type="text"
-            placeholder="Rp."
-            className="w-[250px] placeholder:text-xs placeholder:flex text-xs rounded-sm h-auto py-1 border border-black focus:outline-none px-1"
-          />
-        </div>
-        <div className="max-w-[260px]  h-auto p-1 flex-col gap-1 flex rounded-sm ">
-          <label htmlFor="" className="text-[10px] font-poppins">
-            Sebutkan Riwayat Kredit
-          </label>
-          <input
-            type="text"
-            placeholder="Ada, Rp."
-            className="w-[250px] placeholder:text-xs placeholder:flex text-xs rounded-sm h-auto py-1 border border-black focus:outline-none px-1"
-          />
-        </div>
-        <div className="max-w-[260px]  h-auto p-1 flex-col gap-1 flex rounded-sm ">
-          <label htmlFor="" className="text-[10px] font-poppins">
-            Sebutkan Jenis Kredit Anda
-          </label>
-          <input
-            type="text"
-            placeholder="Kredit Jangka Pendek, Menengah, Panjang"
-            className="w-[250px] placeholder:text-xs placeholder:flex text-xs rounded-sm h-auto py-1 border border-black focus:outline-none px-1"
-          />
-        </div>
-        <div className=" mt-2 ">
-          <button class="bg-transparent h-9 w-22 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border text-xs border-blue-500 hover:border-transparent rounded">
-            Submit
-          </button>
-        </div>
+      </div>
       </div>
     </div>
   );

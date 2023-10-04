@@ -16,7 +16,6 @@ const index = () => {
           <Hero />
         </div>
       </div>
-      </div>
     </div>
   );
 };

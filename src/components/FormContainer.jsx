@@ -14,7 +14,7 @@ const FormContainer = () => {
       className={`flex md:flex-row flex-col font-poppins ${styles.paddingY} `}
     >
       <div
-        className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
+        className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6 hidden md:flex`}
       >
         <Lottie
           animationData={animationData}
@@ -26,7 +26,7 @@ const FormContainer = () => {
       <div
         className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
       >
-        <div className="w-full h-fit bg-white absolute z-10 rounded-3xl">
+        <div className="w-full h-fit bg-white absolute z-[0] mt-[650px] xs:mt-[600px] ss:mt-[500px] md:mt-0 rounded-3xl">
           <div className="w-full flex justify-center my-4">
             <img
               src={logoBlack}
@@ -43,10 +43,6 @@ const FormContainer = () => {
         <div className="absolute z-[1] w-[80%] h-[80%] rounded-full white__gradient bottom-40" />
         <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue__gradient" />
         {/* gradient end */}
-      </div>
-
-      <div className={`ss:hidden ${styles.flexCenter}`}>
-        <GetStarted />
       </div>
     </section>
   );

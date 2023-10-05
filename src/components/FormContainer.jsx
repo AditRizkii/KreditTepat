@@ -26,7 +26,7 @@ const FormContainer = () => {
       <div
         className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
       >
-        <div className="w-full h-fit bg-white absolute z-10 mt-[650px] xs:mt-[600px] ss:mt-[500px] md:mt-0 rounded-3xl">
+        <div className="w-full h-fit bg-white absolute z-10 mt-[650px] mr-5 xs:mt-[600px] ss:mt-[500px] md:mt-0 rounded-3xl">
           <div className="w-full flex justify-center my-4">
             <img
               src={logoBlack}

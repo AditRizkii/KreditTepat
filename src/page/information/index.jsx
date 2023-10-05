@@ -7,7 +7,7 @@ const index = () => {
   return (
     <div className=" bg-transparent w-full h-screen">
       <video
-        className="absolute z-[-1] top-0 left-0 w-full h-fit object-cover"
+        className="absolute z-[-1] top-0 left-0 w-full h-full object-cover"
         autoPlay
         loop
         muted

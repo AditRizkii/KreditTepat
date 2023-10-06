@@ -1,10 +1,8 @@
 import React from "react";
 
 import GetStarted from "./GetStarted";
-import { logoBlack } from "../assets";
+import { logoBlack, robot } from "../assets";
 import styles from "../style";
-import Lottie from "lottie-react";
-import animationData from "../assets/credit-card-animation.json";
 import Form from "./Form";
 
 const FormContainer = () => {
@@ -16,10 +14,10 @@ const FormContainer = () => {
       <div
         className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6 hidden md:flex`}
       >
-        <Lottie
-          animationData={animationData}
-          loop={true}
-          style={{ width: "60%" }}
+        <img
+          src={robot}
+          alt="robot-hand"
+          className="w-11/12 h-auto md:w-11/12 md:h-auto rounded-3xl"
         />
       </div>
 

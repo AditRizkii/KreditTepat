@@ -5,7 +5,7 @@ import Information from "./page/information/index";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/~ubuntu/kredittepat/">
       <Routes>
         <Route path="/" exact element={<Main />} />
         <Route path="/inf" element={<Information />} />
